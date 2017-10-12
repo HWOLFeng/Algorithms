@@ -4,6 +4,7 @@ class Outer {
     private int x = 3;
     class Inner {
         void function(){
+            int x=1;
 //            可以直接访问外部类的私有成员
             System.out.println("inner : " + x);
 //            等价于：
