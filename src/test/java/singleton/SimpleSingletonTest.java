@@ -28,7 +28,7 @@ public void after() throws Exception {
 */ 
 @Test
 public void testShow() throws Exception { 
-//TODO: Test goes here... 
+//TODO: TestStackOfStrings goes here...
 } 
 
 /** 
@@ -38,7 +38,7 @@ public void testShow() throws Exception {
 */ 
 @Test
 public void testGetInstance() throws Exception { 
-//TODO: Test goes here... 
+//TODO: TestStackOfStrings goes here...
 } 
 
 

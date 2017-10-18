@@ -26,7 +26,7 @@ public class UFTest {
      */
     @Test
     public void testUnion() throws Exception {
-//TODO: Test goes here... 
+//TODO: TestStackOfStrings goes here...
     }
 
     /**
@@ -34,7 +34,7 @@ public class UFTest {
      */
     @Test
     public void testConnect() throws Exception {
-//TODO: Test goes here... 
+//TODO: TestStackOfStrings goes here...
     }
 
     @Test
