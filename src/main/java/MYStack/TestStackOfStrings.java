@@ -12,7 +12,6 @@ public class TestStackOfStrings {
     public void test() {
         StackOfStrings stackOfStrings = new StackOfStrings(100);
         System.out.println(stackOfStrings.size() + " left on stack");
-        Scanner scanner = new Scanner(System.in);
         String s = "to be or not to - be - - that - - - is";
         String[] strings = s.split(" ");
         for (int i = 0;i<strings.length;i++){

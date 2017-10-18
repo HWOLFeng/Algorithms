@@ -24,10 +24,13 @@ public class BinarySearch
         BinarySearch ob = new BinarySearch();
         int numb = 0;
         Scanner scanner = new Scanner(System.in);
-        numb = scanner.nextInt();
-        int[] arr = new int[numb];
-        int n = arr.length;
-        int x = 10;
+        int n = scanner.nextInt();
+        int[] arr = new int[n];
+        for (int i = 0; i < n; i++) {
+            numb = scanner.nextInt();
+            arr[i] = numb;
+        }
+        int x = 2;
         int result = ob.binarySearch(arr,0,n-1,x);
         if (result == -1)
             System.out.println("元素不存在");
