@@ -1,8 +1,4 @@
-package MYStack;
-
-import org.junit.Test;
-
-import java.util.Scanner;
+package MYUtil;
 
 /**
  * @author HWOLF
