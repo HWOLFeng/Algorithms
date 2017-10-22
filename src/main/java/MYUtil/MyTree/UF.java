@@ -1,6 +1,4 @@
-package MyTree;
-
-import org.junit.Test;
+package MYUtil.MyTree;
 
 /**
  * @author HWOLF

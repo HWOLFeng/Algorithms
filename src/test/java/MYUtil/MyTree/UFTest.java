@@ -1,4 +1,4 @@
-package MyTree;
+package MYUtil.MyTree;
 
 import org.junit.Test;
 import org.junit.Before;
