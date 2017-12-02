@@ -16,9 +16,10 @@ public class SimpleSingleton {
         System.out.println(this);
     }
 
-    public static SimpleSingleton getInstance(){
-        if (instance==null)
+    public static synchronized SimpleSingleton getInstance(){
+        if (instance==null){
             instance = new SimpleSingleton();
+        }
         return instance;
     }
 }
