@@ -1,6 +1,7 @@
 package collection;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * @author hwolf
@@ -56,6 +57,5 @@ public class ArrayListTest {
          */
         arrayList.clear();
         System.out.println(arrayList.size());
-
     }
 }
