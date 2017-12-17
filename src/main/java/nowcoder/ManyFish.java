@@ -12,11 +12,13 @@ import java.util.Scanner;
  * @date 2017/12/15.
  */
 public class ManyFish {
+    // TODO
     public static Set calType(int min, int max, int n, int[] fishSize) {
         Set<Integer> sizeLink = new HashSet<>();
         for (int i = min; i <= max; i++) {
             for (int j = 0; j < fishSize.length; j++) {
-                if (i / fishSize[j] <= 1 || i / fishSize[j] > 10) {
+                if (!((10 * i >= fishSize[j] && 2 * i <= fishSize[j])
+                        || (i >= fishSize[j] * 2 && i <= fishSize[j] * 10))) {
                     sizeLink.add(i);
                 }
             }
@@ -34,11 +36,11 @@ public class ManyFish {
             fishSize[i] = scanner.nextInt();
         }
         Set<Integer> linkedList = calType(minSize,maxSize,n,fishSize);
-//        StringBuilder s = new StringBuilder();
-//        for (Integer integer : linkedList) {
-//            s.append(integer).append(" ");
-//        }
-//        System.out.println(s.toString());
+        StringBuilder s = new StringBuilder();
+        for (Integer integer : linkedList) {
+            s.append(integer).append(" ");
+        }
+        System.out.println(s.toString());
         System.out.println(linkedList.size());
     }
 }
