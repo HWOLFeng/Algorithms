@@ -23,7 +23,7 @@ public class Flip01 {
 
     public static int BFS(int a, int b, int k) {
         if (a == 0 && b == 0) {
-            return -1;
+            return 0;
         }
         if (k > a + b) {
             return -1;
