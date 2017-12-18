@@ -43,7 +43,7 @@ public class Flip01 {
             }
             // 0 的翻转次数为 i
             // 1 的翻转次数为 k - i
-            for (int i = 1; i < Math.min(tempNode.a, k); i++) {
+            for (int i = 1; i <= Math.min(tempNode.a, k); i++) {
                 if (tempNode.b < k - i) {
                     continue;
                 }
