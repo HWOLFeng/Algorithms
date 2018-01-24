@@ -31,7 +31,7 @@ public class NettyOioServer {
             serverBootstrap.group(eventLoopGroup)
                     .channel(OioServerSocketChannel.class)
                     .localAddress(new InetSocketAddress("localhost",port))
-                    // 指定ChannelHandler
+                    // 指定ChildHandler
                     .childHandler(new ChannelInitializer<Channel>() {
                         @Override
                         protected void initChannel(Channel channel) throws Exception {
