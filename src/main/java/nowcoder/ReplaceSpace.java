@@ -1,6 +1,7 @@
 package nowcoder;
 
-import java.util.Iterator;
+
+import java.util.function.Function;
 
 /**
  * @author hwolf
@@ -16,4 +17,14 @@ public class ReplaceSpace {
     public String replaceSpace(StringBuffer str) {
         return str.toString().replaceAll("\\s", "%20");
     }
+
+    public static void main(String[] args) {
+        // 计算圆面积
+        Function<Integer,Double> calCircleArea = (r)-> 3.14159 * r;
+        int r = 2;
+
+        double circleArea = calCircleArea.apply(r);
+//        int circleArea1 = calCircleArea.apply(r);
+    }
+
 }
