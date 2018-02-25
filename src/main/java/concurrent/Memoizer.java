@@ -2,6 +2,7 @@ package concurrent;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.ExecutionException;
 
 /**
  * 同步缓存1
@@ -18,7 +19,7 @@ public class Memoizer<S,T> implements Computable<S,T> {
     }
 
     @Override
-    public synchronized T compute(S arg) throws InterruptedException {
+    public synchronized T compute(S arg) throws InterruptedException, ExecutionException {
         T result = cacheMap.get(arg);
         if (result == null){
             result = computable.compute(arg);

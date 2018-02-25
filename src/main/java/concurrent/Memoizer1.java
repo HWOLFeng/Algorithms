@@ -2,6 +2,7 @@ package concurrent;
 
 import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ExecutionException;
 
 /**
  * @author hwolf
@@ -24,7 +25,7 @@ public class Memoizer1<S, T> implements Computable<S, T> {
      * @throws InterruptedException
      */
     @Override
-    public T compute(S arg) throws InterruptedException {
+    public T compute(S arg) throws InterruptedException, ExecutionException {
         T target = concurrentHashMap.get(arg);
         if (target == null) {
             target = computable.compute(arg);
