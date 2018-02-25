@@ -10,8 +10,11 @@ import java.util.concurrent.*;
 public class FutureExample {
     public static void main(String[] args) throws ExecutionException, InterruptedException {
         ExecutorService executor = Executors.newCachedThreadPool();
+        // 无返回值
         Runnable task1 = () -> System.out.println("I am tasks1 ...");
+        // 有返回值
         Callable<Integer> task2 = () -> new Integer(100);
+        // 有返回值 get() 方法会阻塞知道任务完成
         Future<?> f1 = executor.submit(task1);
         Future<Integer> f2 = executor.submit(task2);
         System.out.println("task1 is complete??? " + f1.isDone());

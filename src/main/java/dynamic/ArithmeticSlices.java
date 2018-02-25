@@ -1,4 +1,4 @@
-package Dynamic;
+package dynamic;
 
 /**
  * Created by hwolf on 17/11/22.

@@ -1,4 +1,4 @@
-package Dynamic;
+package dynamic;
 
 /**
  * Created by hwolf on 17/11/22.
@@ -24,7 +24,7 @@ public class CountSubstrings {
 //    }
     public static int countSubstrings(String s) {
         int count = 0;
-        if (s.length() == 0 || s == null) {
+        if (s.length() == 0) {
             return 0;
         }
         boolean[][] pal = new boolean[s.length()][s.length()];

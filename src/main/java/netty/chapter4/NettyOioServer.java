@@ -5,6 +5,7 @@ import io.netty.buffer.ByteBuf;
 import io.netty.buffer.Unpooled;
 import io.netty.channel.*;
 import io.netty.channel.nio.NioEventLoopGroup;
+import io.netty.channel.oio.OioEventLoopGroup;
 import io.netty.channel.socket.oio.OioServerSocketChannel;
 import io.netty.util.CharsetUtil;
 
@@ -21,8 +22,8 @@ public class NettyOioServer {
     public static void server(int port){
         // 字节流
         final ByteBuf byteBuf = Unpooled.unreleasableBuffer(Unpooled.copiedBuffer("Hello HWOLF", CharsetUtil.UTF_8));
-        // EventLoopGroup
-        EventLoopGroup eventLoopGroup = new NioEventLoopGroup();
+        // OioEventLoopGroup
+        EventLoopGroup eventLoopGroup = new OioEventLoopGroup();
         // Bootstrap 启动
         try{
             // 引导服务器配置

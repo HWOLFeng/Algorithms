@@ -54,15 +54,11 @@ public class QuickSort2 {
 
     public static void main(String[] args) {
         int[] a = {26, 5, 98, 108, 28, 99, 100, 56, 34, 1};
-        int[] b = {26, 5, 98, 108, 28, 99, 100, 56, 34, 1,26, 5, 98, 108, 28, 99, 100, 56, 34, 1};
+        int[] b = {26, 5, 98, 108, 28, 99, 100, 56, 34, 1, 26, 5, 98, 108, 28, 99, 100, 56, 34, 1};
         new QuickSort2().quickSort2(a, 0, a.length - 1);
-        Arrays.stream(a).forEach((x) -> {
-            System.out.print(x + ",");
-        });
+        Arrays.stream(a).forEach((x) -> System.out.print(x + ","));
         System.out.println();
         new QuickSort2().quickSort2(b, 0, b.length - 1);
-        Arrays.stream(b).forEach((x) -> {
-            System.out.print(x + ",");
-        });
+        Arrays.stream(b).forEach((x) -> System.out.print(x + ","));
     }
 }

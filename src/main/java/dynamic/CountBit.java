@@ -1,6 +1,4 @@
-package Dynamic;
-
-import java.util.List;
+package dynamic;
 
 /**
  * Created by hwolf on 17/11/22.

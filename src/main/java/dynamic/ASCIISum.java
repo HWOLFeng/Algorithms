@@ -1,4 +1,4 @@
-package Dynamic;
+package dynamic;
 
 /**
  * 动态规划问题，因为dp[i][s2.length()] = dp[i+1][s2.length()] + s1.codePointAt(i)
