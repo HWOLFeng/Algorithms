@@ -4,6 +4,7 @@ import java.util.Map;
 import java.util.concurrent.*;
 
 /**
+ * 还是使用回调，但是这里使用原子添加的方法，并在计算出现异常的时候移除缓存
  * @author hwolf
  * @email h.wolf@qq.com
  * @date 2018/2/25.
