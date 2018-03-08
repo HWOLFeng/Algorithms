@@ -1,6 +1,5 @@
-package thinking_java.javaIO;
+package thinkingjava.javaIO;
 
-import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 

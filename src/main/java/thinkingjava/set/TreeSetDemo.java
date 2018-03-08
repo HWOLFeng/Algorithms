@@ -1,4 +1,4 @@
-package thinking_java.set;
+package thinkingjava.set;
 
 import java.util.Comparator;
 import java.util.Iterator;

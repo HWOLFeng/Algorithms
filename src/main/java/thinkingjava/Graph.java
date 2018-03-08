@@ -1,4 +1,4 @@
-package thinking_java;
+package thinkingjava;
 
 public class Graph {
 }

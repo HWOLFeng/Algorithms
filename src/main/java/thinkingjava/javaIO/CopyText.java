@@ -1,4 +1,4 @@
-package thinking_java.javaIO;
+package thinkingjava.javaIO;
 
 import java.io.FileReader;
 import java.io.FileWriter;

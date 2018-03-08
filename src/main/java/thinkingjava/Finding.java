@@ -1,4 +1,4 @@
-package thinking_java;
+package thinkingjava;
 
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;

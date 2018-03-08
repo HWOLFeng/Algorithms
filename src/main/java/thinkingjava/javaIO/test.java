@@ -1,4 +1,4 @@
-package thinking_java.javaIO;
+package thinkingjava.javaIO;
 
 import java.util.concurrent.atomic.AtomicInteger;
 
