@@ -126,6 +126,54 @@ public class BinTree {
         }
     }
 
+//    public static void pre(BTNode root) {
+//        if (root == null) {
+//            return;
+//        }
+//        Stack<BTNode> stack = new Stack<>();
+//        while (root != null || !stack.isEmpty()) {
+//            while (root != null) {
+//                visit(root);
+//                stack.push(root);
+//                root = root.getLeft();
+//            }
+//            root = stack.pop().getRight();
+//        }
+//
+//    }
+
+    public static void iterativeInOrder1(BTNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<BTNode> stack = new Stack<>();
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                stack.push(root);
+                root = root.getLeft();
+            }
+            if (!stack.isEmpty()) {
+                root = stack.pop();
+                visit(root);
+                root = root.getRight();
+            }
+        }
+    }
+
+//    public static void mid(BTNode root) {
+//        if (root == null) {
+//            return;
+//        }
+//        Stack<BTNode> stack = new Stack<>();
+//        stack.push(root);
+//        while (root != null) {
+//            for (; root.getRight() != null; root = root.getRight()) {
+//                stack.push(root);
+//            }
+//
+//        }
+//    }
+
     /**
      * 非递归实现后序遍历
      *
@@ -136,27 +184,53 @@ public class BinTree {
             return;
         }
         Stack<BTNode> stack = new Stack<>();
-        // 先放入根节点
         BTNode temp = root;
+        // 先放入根节点
         stack.push(root);
         while (!stack.isEmpty()) {
+            // 左入，先找到最左边节点
             while (root.getLeft() != null) {
                 stack.push(root);
                 root = root.getLeft();
             }
+            // 处理根节点，右子树已经访问过，或没有右子树
             while (root != null && (root.getRight() == null || root.getRight() == temp)) {
+                // 先访问左子树，或者是根节点
                 visit(root);
+                // 保存根节点，或者上个
                 temp = root;
                 if (stack.isEmpty()) {
                     return;
                 }
+                // 查看根，如果根节点没有右子树，或者就是自己，继续向上
                 root = stack.pop();
             }
+            // 放回根
             stack.push(root);
-            // 如果为null表示又子树处理完
+            // 如果为null表示又右子树处理完，否则压入右子树，并查看是否有左子树
             root = root.getRight();
         }
     }
+
+    public static void pre(BTNode root) {
+        if (root == null) {
+            return;
+        }
+        Stack<BTNode> stack = new Stack<>();
+        while (root != null || !stack.isEmpty()) {
+            while (root != null) {
+                visit(root);
+                stack.push(root);
+                root = root.getLeft();
+            }
+            if (!stack.isEmpty()) {
+                root = stack.pop();
+                root = root.getRight();
+            }
+        }
+    }
+
+
 
     public static void main(String[] args) {
         BinTree tree = new BinTree(init());
@@ -164,6 +238,17 @@ public class BinTree {
         iterativeInOrder(tree.getRoot());
         System.out.println();
         System.out.print("　In-Order:");
-        midVisit(tree.getRoot());
+        iterativeInOrder1(tree.getRoot());
+        System.out.println();
+        System.out.println("Pre");
+        pre(tree.getRoot());
+        System.out.println();
+        System.out.println("Pre");
+        preVisit(tree.getRoot());
+        System.out.println();
+        System.out.println("Pre");
+        postOrder(tree.getRoot());
+        System.out.println();
+        System.out.println("Pre");
     }
 }

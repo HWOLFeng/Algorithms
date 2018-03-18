@@ -1,6 +1,5 @@
 package offer;
 
-import java.lang.reflect.InvocationHandler;
 
 /**
  * @author hwolf

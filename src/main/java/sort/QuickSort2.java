@@ -42,6 +42,7 @@ public class QuickSort2 {
             }
             swap(numbers, i, j);
         }
+        // 最后需要将最左边的基准放到中间
         swap(numbers, left, j);
         return j;
     }

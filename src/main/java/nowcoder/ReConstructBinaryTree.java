@@ -5,6 +5,7 @@ import offer.TreeNode;
 import java.util.Arrays;
 
 /**
+ * 已知前序遍历和中序遍历求树结构
  * @author hwolf
  * @email h.wolf@qq.com
  * @date 2018/1/4.
